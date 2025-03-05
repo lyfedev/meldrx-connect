@@ -1,0 +1,36 @@
+
+
+
+.section1 {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-shrink: 0;
+    background-color: #d9e3e6;
+    font-size: 28px;
+    
+    padding-left: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.section2 {
+    display: flex;
+    align-items: stretch;  /* ✅ Forces all columns to match the tallest one */
+    background-color: transparent;
+}
+
+.section3 {
+    flex-grow: 1;  /* ✅ Ensure .section2 fills available space */
+    display: flex;
+    align-items: stretch;  /* ✅ Forces all columns to match the tallest one */
+    background-color: transparent;
+}
+
+.border-right {
+    border-right: 2px solid gray;
+    flex-grow: 1;  /* ✅ Forces columns to expand equally */
+    display: flex;
+    align-items: stretch;  /* ✅ Makes sure the borders stretch fully */
+}

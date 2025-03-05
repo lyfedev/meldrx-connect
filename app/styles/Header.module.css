@@ -1,0 +1,24 @@
+
+.header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #759cc9 66%, #939597 34%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.signOutButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

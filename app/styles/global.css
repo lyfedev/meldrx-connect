@@ -1,0 +1,24 @@
+.container {
+    max-width: 100% !important;  /* ✅ Ensures full width */
+    width: 100% !important;
+    padding: 0 !important;  /* ✅ Removes Bootstrap's default padding */
+	padding-left: 10px !important;  /* ✅ Removes Bootstrap's default padding */
+   
+    background-color: transparent !important; /* ✅ Prevents unwanted background */
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ecf3f5;
+}
+
+.content {
+    display: block !important; /* ✅ Ensure it's applied */
+    margin-top: 120px !important; /* ✅ Push content down */
+    padding-bottom: 100px;
+	
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "patientID": "abc123",
+    "dob":"2/28/1974",
+    "last": "Brennan",
+    "first": "Bonnie"
+  },
+  {
+    "patientID": "abc234",
+    "dob":"2/27/1967",
+    "last": "Avery",
+    "first": "Deena"
+  },
+  {
+    "patientID": "abc567",
+    "dob":"8/15/1990",
+    "last": "Lawrence",
+    "first": "Jennifer"
+  }
+]
