@@ -326,7 +326,7 @@ const handleSubmit = async () => {
      
 
         <br/>
-            {/* 📌 Qualification Checks */}
+            
                         {(() => {
                             const hasRPMCondition = selectedPatient.conditions.some(condition =>
                                 ["38341003", "13645005"].includes(condition.code)
@@ -364,7 +364,6 @@ const handleSubmit = async () => {
           
 
 
-                                {/* Display Observations */}
           {(() => {
     const friendlyNames = {
         "2708-6": "OxSat",
