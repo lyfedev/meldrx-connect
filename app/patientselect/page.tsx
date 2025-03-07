@@ -310,7 +310,7 @@ const handleSubmit = async () => {
     );
 })()}
 
-         {/* Extract Height & Weight from Observations */}
+
 {(() => {
     const heightObs = selectedPatient.observations.find(obs => obs.code === "8302-2"); // LOINC Code for Height
     const weightObs = selectedPatient.observations.find(obs => obs.code === "29463-7"); // LOINC Code for Weight
