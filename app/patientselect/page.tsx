@@ -311,47 +311,6 @@ const handleSubmit = async () => {
 })()}
 
 
-{(() => {
-    const heightObs = selectedPatient.observations.find(obs => obs.code === "8302-2"); // LOINC Code for Height
-    const weightObs = selectedPatient.observations.find(obs => obs.code === "29463-7"); // LOINC Code for Weight
-
-    const height = heightObs ? parseFloat(heightObs.value) : null;
-    const weight = weightObs ? parseFloat(weightObs.value) : null;
-
-    // Calculate BMI: BMI = (weight in lbs * 703) / (height in inches)^2
-    const bmi = height && weight ? ((weight * 703) / (height * height)).toFixed(1) : "Unknown";
-
-    return (
-        <>
-     
-
-        <br/>
-            
-                        {(() => {
-                            const hasRPMCondition = selectedPatient.conditions.some(condition =>
-                                ["38341003", "13645005"].includes(condition.code)
-                            );
-                            const hasRTMCondition = selectedPatient.conditions.some(condition =>
-                                condition.code === "13645005"
-                            );
-                            
-                            let qualifyingConditions = selectedPatient.conditions.length;
-                            if (bmi !== "N/A" && parseFloat(bmi) >= 25) {
-                                qualifyingConditions += 1;
-                            }
-
-                            return (
-                                <>
-                                    {hasRPMCondition && <p className="text-green-600 font-semibold">RPM Qualified. $90 - $150/month</p>}
-                                    {hasRTMCondition && <p className="text-green-600 font-semibold">RTM Qualified. $50 - $150/month</p>}
-                                    {qualifyingConditions > 1 && <p className="text-green-600 font-semibold">CCM Qualified. $60 - $150/month</p>}
-                                </>
-                            );
-                        })()}
-        </>
-    );
-})()}
-
           
 
 
