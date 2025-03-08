@@ -11,10 +11,10 @@ export default function Page() {
   const onLaunchClick = useCallback((launchData: IMeldRxLaunchData) => {
     const fhirUrl = launchData.workspaceUrl;
     FHIR.oauth2.authorize({
-        clientId: launchData.clientId,
-        scope: launchData.scope,
-        redirectUri: launchData.redirectUrl,
-        iss: fhirUrl,
+        clientId: "ffd265b9c6c8480c9f3cc81585f3ad3b",
+        scope: "openid fhirUser profile meldrx-api patient/*.read launch user/*.read cds patient/*.*",
+        redirectUri: "https://meldrx-connect.vercel.app/login-callback",
+        iss: "https://app.meldrx.com/api/fhir/8225e38e-0a11-4d2a-ac71-c372781d630d"
     });
   }, [FHIR]);
 
