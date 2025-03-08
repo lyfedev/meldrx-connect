@@ -281,34 +281,7 @@ const handleSubmit = async () => {
 <br/>
                             
                                 {/* Define SNOMED Code Mappings */}
-{(() => {
-    const conditionMap = {
-        "38341003": "Hypertension",
-        "267432004": "High Cholesterol",
-        "44054006": "Type 2 Diabetes",
-        "13645005": "COPD",
-    };
 
-    // Extract conditions and filter by valid codes
-    const matchedConditions = selectedPatient.conditions
-        ?.map((condition) => conditionMap[condition.code])
-        .filter(Boolean); // Remove undefined values
-
-    return (
-        <>
-            <p><strong>Conditions:</strong></p>
-            <ul className="list-disc list-inside text-gray-600">
-                {matchedConditions.length > 0 ? (
-                    matchedConditions.map((condition, index) => (
-                        <li key={index}>{condition}</li>
-                    ))
-                ) : (
-                    <li className="text-gray-500">No matching conditions</li>
-                )}
-            </ul>
-        </>
-    );
-})()}
 
 
           
