@@ -319,7 +319,7 @@ const handleSubmit = async () => {
         }
     }
 
-
+    return null;  // <-- Fix: JSX requires a return type
 })()}
                             </div>
                         ) : (
