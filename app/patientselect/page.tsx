@@ -48,7 +48,7 @@ const renderPatientQualifications = (selectedPatient: any): JSX.Element => {
     }
 
     return (
-        <div key="qualifications"> {/* ✅ Ensures JSX is always returned */}
+        <div key="qualifications"> 
             <br />
             {hasRPMCondition && <p className="text-green-600 font-semibold">RPM Qualified. $90 - $150/month</p>}
             {hasRTMCondition && <p className="text-green-600 font-semibold">RTM Qualified. $50 - $150/month</p>}
@@ -241,7 +241,7 @@ const handleSubmit = async () => {
                 <h1 className="text-2xl font-bold mb-2">Build Patient Careplans</h1>
                 <p className="text-lg mb-6">Select patients for care plan creation</p>
                 <div className="grid grid-cols-12 gap-4">
-                    {/* Left Panel: Scrollable Patient List */}
+                    
                     <div className="col-span-4 bg-white p-4 rounded-lg shadow-md overflow-y-auto h-[36rem]">
                         <h2 className="text-lg font-semibold mb-2">Patients</h2>
                         <ul>
@@ -259,7 +259,7 @@ const handleSubmit = async () => {
                         </ul>
                     </div>
                     
-                    {/* Middle Panel: Patient Details */}
+                    
                     <div className="col-span-6 bg-white p-4 rounded-lg shadow-md h-[36rem]">
                         <h2 className="text-lg font-semibold">Patient Details</h2>
                         {selectedPatient ? (
@@ -280,7 +280,7 @@ const handleSubmit = async () => {
 })()}]</p>
 <br/>
                             
-                                {/* Define SNOMED Code Mappings */}
+                                
 
 
 
@@ -327,7 +327,7 @@ const handleSubmit = async () => {
                         )}
                     </div>
                     
-                    {/* Right Panel: Actions */}
+                    
                     <div className="col-span-2 bg-gray-200 p-4 rounded-lg shadow-md h-[36rem]">
                         <h2 className="text-xl font-semibold">Actions</h2>
                         <button className="mt-4 px-4 py-2 bg-[#6a92c2] text-white rounded-lg"
