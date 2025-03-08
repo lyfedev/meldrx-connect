@@ -308,9 +308,9 @@ const handleSubmit = async () => {
     const latestObservations = {};
 
     // Sort observations by effectiveDateTime (newest first)
-    const sortedObservations = [...selectedPatient.observations]
-        .filter(obs => obs.code !== "8302-2" && obs.code !== "29463-7") // Exclude Height & Weight
-        .sort((a, b) => new Date(b.effectiveDateTime) - new Date(a.effectiveDateTime));
+const sortedObservations = [...selectedPatient.observations]
+    .filter(obs => obs.code !== "8302-2" && obs.code !== "29463-7") // Exclude Height & Weight
+    .sort((a, b) => new Date(b.effectiveDateTime).getTime() - new Date(a.effectiveDateTime).getTime());
 
     // Extract only the latest observation for each type
     for (const obs of sortedObservations) {
